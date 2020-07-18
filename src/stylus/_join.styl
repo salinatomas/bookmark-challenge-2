@@ -7,18 +7,28 @@
   small 
     text-transform: uppercase
     letter-spacing: 4px
-  .form 
-    &-input
-      width: 100%
-      padding: 1.5em
-      box-sizing: border-box
-      margin-bottom: 1em
-      border: none
-      border-radius: .5em
-      outline: none 
-    ::placeholder 
-      color: var(--grayishBlue)
-    input[type="submit"]
-      margin: 0
-      outline: none
+.form 
+  maximun()
+  &-input
+    width: 100%
+    padding: 1.5em
+    box-sizing: border-box
+    margin-bottom: 1em
+    border: none
+    border-radius: .5em
+    outline: none 
+  ::placeholder 
+    color: var(--grayishBlue)
+  input[type="submit"]
+    margin: 0
+    outline: none
+
+  @media screen and (min-width: 1024px)
+    display: flex
+    justify-content: space-between
+    &-input 
+      width: 70%
+      margin-bottom: 0
+    input[type="submit"] 
+      width: 25%
       

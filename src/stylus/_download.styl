@@ -4,13 +4,11 @@
   .u-wrapper 
     > p 
       margin-bottom: 3em
-
-
   &-grid 
     margin-top: 3em
     display: grid
     grid-row-gap: 3em
-    margin: 0 1em
+    maximun()
   &-item 
     box-shadow: 0 10px 20px -5px alpha(hsl(229, 8%, 60%), .4)
     border-radius: 1em
@@ -24,3 +22,20 @@
       margin-bottom: 4em
       margin-top: 0
     
+  @media screen and (min-width: 1024px)
+    &-grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-column-gap: 2em
+      padding-bottom: 5em
+      maximun(1000px)
+
+    &-item
+      padding: 1em
+      &:nth-child(2n)
+        position: relative
+        top: 3em
+      &:nth-child(3n)
+        position: relative
+        top: 6em
+    & .u-p
+      margin-bottom: 3em

@@ -1,6 +1,7 @@
 .carousel 
   text-align: left 
   margin: 2em 0
+  maximun(600px)
   &-detail
     &[open]
       .carousel-header
@@ -12,6 +13,16 @@
     padding: 1.5em 0
     border-bottom: 1px solid alpha(hsl(229, 8%, 60%), .5)
     outline: none
+    cursor pointer
+    user-select: none
     &::-webkit-details-marker
       color: var(--softBlue)
       float: right 
+    &:hover 
+      hover()
+
+  @media screen and (min-width: 1024px)
+    border-top: 1px solid alpha(hsl(229, 8%, 60%), .5)
+    margin-top: 2em
+    .u-p 
+      margin: 0

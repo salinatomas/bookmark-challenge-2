@@ -5,6 +5,7 @@
     border-bottom: 1px solid var(--grayishBlue)
   &-content 
     display: none
+    flex-direction: column
     img 
       max-width: 100%
       margin-bottom: 2em
@@ -14,6 +15,7 @@
     display: block
     padding: 1em 0 
     position: relative
+    cursor pointer
     &:after 
       display: none
       content: ""
@@ -24,6 +26,8 @@
       left: 0 
       transform: translateX(50%)
       box-shadow: 0 5px 0 0 inset hsl(0, 94%, 66%)
+    &:hover 
+      hover()
 
   input 
     display: none
@@ -31,15 +35,37 @@
     & ~ ul [for="bookmarking"]:after 
       display: block
     & ~ .tabs-grid #tab-bookmarking
-      display: block
+      display: flex
   input[id="searching"]:checked
     & ~ ul [for="searching"]:after 
       display: block
     & ~ .tabs-grid #tab-searching
-      display: block
+      display: flex
   input[id="sharing"]:checked
     & ~ ul [for="sharing"]:after 
       display: block
     & ~ .tabs-grid #tab-sharing
-      display: block
+      display: flex
+
+  @media screen and (min-width: 1024px)
+    border-top: none
+    text-align: left
+    ul 
+      display: flex
+      justify-content: center
+    label 
+      padding: 1em 2em
+      &:after 
+        width: 100%
+        transform: translateX(0)
+    img 
+      margin-bottom: 0
+    
+    &-content 
+      flex-direction: row
+      align-items: center
+      div 
+        margin-left: 5em
+        max-width: 500px
+    
 

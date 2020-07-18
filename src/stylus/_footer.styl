@@ -5,7 +5,7 @@
   a 
     color: white
     text-decoration: none
-  ul 
+  &-menu 
     margin: 2em 0
     li 
       padding: 1em 0
@@ -13,6 +13,9 @@
       a 
         color: alpha(#fff, .8)
         letter-spacing: 1px
+        padding: 1em
+        &:hover
+          hover()
   &-social
     a 
       width: 40px
@@ -20,5 +23,26 @@
       display: inline-block
     .facebook 
       background: url("../images/icon-facebook.svg") no-repeat center
+      &:hover
+        background: url("../images/icon-facebook-hover.svg") no-repeat center
     .twitter 
       background: url(../images/icon-twitter.svg) no-repeat center
+      &:hover
+        background: url("../images/icon-twitter-hover.svg") no-repeat center
+
+  @media screen and (min-width: 1024px) 
+    padding: 1em 0
+    img 
+      margin-right: 2em
+    &-content 
+      display: flex
+      justify-content: space-between
+      align-items: center
+      maximun(1000px)
+    &-primary 
+      display: flex
+      align-items: center
+    &-menu 
+      display: flex
+      margin: 0
+      
