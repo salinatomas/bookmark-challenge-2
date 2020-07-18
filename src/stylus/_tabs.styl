@@ -1,0 +1,21 @@
+.tabs 
+  border: 1px solid blue
+  &-link
+    padding: 1em 0
+    border-bottom: 1px solid var(--grayishBlue)
+  &-content 
+    display: none
+    img 
+      max-width: 100%
+  input 
+    display: none
+  input[id="bookmarking"]:checked
+    & ~ .tabs-grid #tab-bookmarking
+      display: block
+  input[id="searching"]:checked
+    & ~ .tabs-grid #tab-searching
+      display: block
+  input[id="sharing"]:checked
+    & ~ .tabs-grid #tab-sharing
+      display: block
+

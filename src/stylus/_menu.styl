@@ -1,0 +1,55 @@
+.menu 
+  // display: 
+  visibility: hidden
+  opacity: 0
+  position: absolute
+  top: 100%
+  left: 0
+  right 0
+  // bottom: 0
+  background-color: alpha(hsl(229, 31%, 21%), .9)
+  height: 100vh
+  transform: translateY(-30px)
+  transition: .3s transform, .3s opacity
+  will-change: transform 
+  ul 
+    padding: 0
+    li 
+      list-style: none
+      border-top: 1px solid var(--grayishBlue)
+      &:last-child
+        a
+          border: 2px solid white
+          border-radius: 5px
+          margin-top: 1em
+          padding: .7em
+  a 
+    color: white
+    text-decoration: none
+    text-transform: uppercase
+    display: block
+    text-align: center
+    padding: 1em
+    letter-spacing: 2px
+  &-checkbox 
+    display: none
+    &:checked
+      & ~ .header
+        background-color: alpha(hsl(229, 31%, 21%), .9)
+        & .header-logo
+          background-image: url('../images/logo-bookmark-white.svg')
+        & .menu-open
+          background: url('../images/icon-close.svg') no-repeat center
+        & .menu
+          transform: translateY(0)
+          visibility: visible
+          opacity: 1
+
+
+  &-open
+    user-select: none
+    width: 40px
+    height 40px
+    display: inline-flex
+    cursor: pointer
+    background: url('../images/icon-hamburger.svg') no-repeat center
