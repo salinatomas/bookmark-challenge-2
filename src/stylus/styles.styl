@@ -1,6 +1,10 @@
 @import "_header.styl"
 @import "_hero.styl"
 @import "_features.styl"
+@import "_download.styl"
+@import "_questions.styl"
+@import "_join.styl"
+@import "_footer.styl"
 
 :root
   --softBlue: hsl(231, 69%, 60%)
@@ -15,6 +19,7 @@ body
   margin: 0
 ul 
   padding: 0
+  margin: 0
   list-style: none
 
 .is-hidden 
@@ -29,7 +34,15 @@ ul
   font-size: 2em
   font-weight: 500
 .u-h2 
-  @extends .u-h1 
+  font-size: 1.6em 
+  font-weight: 500
+.u-h3 
+  font-size: 1.3em
+  font-weight: 500
+.u-h4 
+  font-size: 1.5em
+  font-weight: 400
+  margin-top: .5em
 
 .u-p 
   color: var(--grayishBlue)
@@ -52,4 +65,9 @@ ul
   &.is-grey
     background: #f7f7f7
     color: var(--veryDarkBlue)
+  &.is-red
+    background: var(--softRed)
+
+  &.is-fullWidth
+    width: 100%
 
